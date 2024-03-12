@@ -64,7 +64,23 @@ header {
   background-color: #0056b3; /* Couleur du bouton au survol */
   color: white;
 }
+h2 {
+  text-align: center;
+  font-weight: bold; 
+  position: relative;
+  margin-bottom: 1em;
+}
 
+h2::after {
+  content: ''; /* Créer un pseudo-élément pour le soulignement */
+  position: absolute;
+  left: 50%; /* Centrer le soulignement */
+  transform: translateX(-50%); /* Aligner correctement le soulignement */
+  bottom: -10px; /* Position sous le texte */
+  height: 2px; /* Épaisseur du soulignement */
+  width: 20%; /* Largeur du soulignement */
+  background-color: #FBEE66; /* Couleur du soulignement */
+}
 .race-card {
   position: relative;
   background-size: cover;
@@ -117,7 +133,7 @@ header {
   transform: scale(1.05); /* Léger effet de zoom au survol */
 }
 .race-card:hover .race-name {
-  bottom: 100%; /* Déplace le titre vers le haut à la hauteur de la description */
+  bottom: 65%; /* Déplace le titre vers le haut à la hauteur de la description */
 }
 .race-card:hover .race-description {
   opacity: 1;
