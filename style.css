@@ -64,17 +64,6 @@ header {
 .nav-link:hover::after {
   background-color: #FBEE66; /* Couleur jaune au survol */
 }
-
-.btn-primary {
-  background-color: #007bff; /* Couleur du bouton */
-  color: white;
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3; /* Couleur du bouton au survol */
-  color: white;
-}
 h2 {
   text-align: center;
   font-weight: bold; 
@@ -83,14 +72,29 @@ h2 {
 }
 
 h2::after {
-  content: ''; /* Créer un pseudo-élément pour le soulignement */
+  content: ''; 
   position: absolute;
-  left: 50%; /* Centrer le soulignement */
-  transform: translateX(-50%); /* Aligner correctement le soulignement */
-  bottom: -10px; /* Position sous le texte */
-  height: 2px; /* Épaisseur du soulignement */
-  width: 20%; /* Largeur du soulignement */
-  background-color: #FBEE66; /* Couleur du soulignement */
+  left: 50%; 
+  transform: translateX(-50%); 
+  bottom: -10px; 
+  height: 2px; 
+  width: 20%; 
+  background-color: #FBEE66; 
+}
+.btn {
+  padding-left: 3em;
+  padding-right: 3em;
+  border-radius: 0;
+  background-color: transparent; 
+  color: black; 
+  border: 1px solid #000000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover, .btn:focus {
+  background-color: #FBEE66; 
+  color: black; 
+  transform: scale(1.05); 
 }
 .race-card {
   position: relative;
@@ -111,7 +115,7 @@ h2::after {
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   text-align: center;
-  transition: transform 0.3s ease; /* Animation de transition */
+  transition: transform 0.3s ease;
 }
 
 .race-name {
@@ -127,7 +131,7 @@ h2::after {
 
 .race-description {
   position: absolute;
-  bottom: -100%; /* Démarre en dehors de la vue en bas */
+  bottom: -100%; 
   left: 0;
   width: 100%;
   opacity: 0;
@@ -141,43 +145,42 @@ h2::after {
 }
 
 .race-card:hover {
-  transform: scale(1.05); /* Léger effet de zoom au survol */
+  transform: scale(1.05); 
 }
 .race-card:hover .race-name {
-  bottom: 65%; /* Déplace le titre vers le haut à la hauteur de la description */
+  bottom: 65%;
 }
 .race-card:hover .race-description {
   opacity: 1;
-  /* transform: translateY(-100%);  */
   bottom: 0;
 }
 
 .race-card:hover .race-name {
-  transform: translateY(-100%); /* Déplace le titre vers le haut */
+  transform: translateY(-100%); 
 }
 
-/* Styles responsives spécifiques à Bootstrap */
+
 @media (max-width: 767.98px) {
   .logo-menu-container {
     padding: 0.5rem;
   }
 
   header {
-    height: auto; /* Hauteur auto pour les petits écrans */
+    height: auto; 
   }
 
   .navbar-nav {
     text-align: center;
   }
 }
-/* Très petits appareils (moins de 576px) */
+
 @media (max-width: 575.98px) {
   body {
-    font-size: 14px; /* Taille de police plus petite */
+    font-size: 14px;
   }
 
   .nav-link {
-    margin: 5px 0; /* Marge réduite pour les liens */
+    margin: 5px 0; 
   }
 }
 
@@ -205,6 +208,6 @@ h2::after {
 /* Très grands appareils (ordinateurs de bureau, 1200px et plus) */
 @media (min-width: 1200px) {
   body {
-    font-size: 18px; /* Taille de police plus grande */
+    font-size: 18px; 
   }
 }
