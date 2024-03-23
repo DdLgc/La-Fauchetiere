@@ -3,7 +3,8 @@
 ## Description
 Le site web du Domaine de la Fauchetière présente notre élevage spécialisé dans trois races de chiens : le Berger Allemand, le Spitz Loup, et le Bouvier Bernois. Le site offre une expérience utilisateur enrichissante avec des sections dédiées à chaque race, une galerie d'images, des informations sur l'élevage, et des contacts.
 
-## Fonctionnalités
+
+## Fonctionnalités 
 - **Accueil** : Présentation brève de l'élevage et accès rapide aux différentes sections.
 - **Nos Races** : Détails sur les races élevées, avec des cartes interactives.
 - **Galerie** : Images des chiens et des installations de l'élevage.
