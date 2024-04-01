@@ -19,6 +19,7 @@ Le site web du Domaine de la Fauchetière présente notre élevage spécialisé 
 ## Structure du Projet
 - `index.html` : Page principale du site.
 - `style.css` : Feuille de style personnalisée pour le site.
+- `Pages/"races"` : Feuilles des races différentes de l'élevage.
 - `assets/` : Dossier contenant les images et autres ressources statiques.
 
 ## Installation et Déploiement
