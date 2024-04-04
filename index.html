@@ -22,10 +22,10 @@
               </a>
               <ul class="navbar-nav w-100 ">
                 <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">L'élevage</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Nos races</a></li>
-                <li class="nav-item"><a class="nav-link" href="gallery.html">Galerie</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#farming">L'élevage</a></li>
+                <li class="nav-item"><a class="nav-link" href="#breed">Nos races</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -34,7 +34,7 @@
     </div>
   </header>
   <main>
-    <section class="bienvenue container my-5">
+    <section id="farming" class="bienvenue container my-5">
       <div class="row align-items-center">
         <!-- Image fluide qui disparaît sur les petits écrans -->
         <div class="col-md-6 d-none d-md-block">
@@ -57,7 +57,7 @@
         </div>
       </div>
     </section>
-    <section class="container-fluid my-5 p-3" style="background-color: #F6F6F2;">
+    <section id="birth" class="container-fluid my-5 p-3" style="background-color: #F6F6F2;">
       <div class="row">
         <div class="col text-center">
           <h2>Les naissances</h2>
@@ -70,32 +70,39 @@
         </div>
       </div>
     </section>
-    <section class="container-fluid my-5">
+    <section id="breed" class="container-fluid my-5">
       <h2 class="text-center">Nos races</h2>
       <div class="row justify-content-center">
         <div class="col-md-4">
           <div class="race-card" style="background-image: url('./assets/Spitz.png');">
             <div class="race-name">Spitz Loup</div>
-            <div class="race-description js-truncate">Le spitz-loup ou keeshond est une variété de taille du spitz allemand, race de chien originaire d'Allemagne. Il s'agit de la variété la plus grande, elle n'admet qu'une seule couleur de robe, le gris-loup. Adopté par les mariniers hollandais, c'est un excellent chien de garde.</div>
+            <div class="race-description js-truncate">Le spitz-loup ou keeshond est une variété de taille du spitz
+              allemand, race de chien originaire d'Allemagne. Il s'agit de la variété la plus grande, elle n'admet
+              qu'une seule couleur de robe, le gris-loup. Adopté par les mariniers hollandais, c'est un excellent chien
+              de garde.</div>
           </div>
         </div>
-    
+
         <div class="col-md-4">
           <div class="race-card" style="background-image: url('./assets/Bouvier.png');">
             <div class="race-name">Berger Allemand</div>
-            <div class="race-description js-truncate">Le Berger Allemand est un chien robuste, athlétique et endurant. Il est doté d’un corps très harmonieux et bâti pour l’effort physique.</div>
+            <div class="race-description js-truncate">Le Berger Allemand est un chien robuste, athlétique et endurant.
+              Il est doté d’un corps très harmonieux et bâti pour l’effort physique.</div>
           </div>
         </div>
-    
+
         <div class="col-md-4">
           <div class="race-card" style="background-image: url('./assets/Bouvier.png');">
             <div class="race-name">Le bouvier bernois</div>
-            <div class="race-description js-truncate">Le bouvier bernois est une race de chien dont la Fédération cynologique internationale attribue l'origine à la Suisse. Chien de ferme originellement conçu pour la garde des bâtiments, des bovins et le transport du lait, il est aujourd'hui un chien d’utilité polyvalent et chien de famille, mais reste sportif et peut être gardien même si ce n'est pas sa spécialité</div>
+            <div class="race-description js-truncate">Le bouvier bernois est une race de chien dont la Fédération
+              cynologique internationale attribue l'origine à la Suisse. Chien de ferme originellement conçu pour la
+              garde des bâtiments, des bovins et le transport du lait, il est aujourd'hui un chien d’utilité polyvalent
+              et chien de famille, mais reste sportif et peut être gardien même si ce n'est pas sa spécialité</div>
           </div>
         </div>
       </div>
     </section>
-    
+
 
 
 
@@ -128,15 +135,15 @@
     </span> -->
 
 
-    
+
     </section>
-    <section class="container-fluid my-5" style="background-color: #F6F6F2;">
+    <section id="gallery" class="container-fluid my-5" style="background-color: #F6F6F2;">
       <div class="row">
         <div class="col-12 text-center">
           <h2>Galerie</h2>
           <p>Découvrez plus de photos de nos races</p>
         </div>
-    
+
         <!-- Images de la galerie -->
         <div class="col-12 col-md-6 col-lg-3 my-3">
           <img src="chemin/vers/image1.jpg" alt="Description image 1" class="img-fluid">
@@ -150,31 +157,40 @@
         <div class="col-12 col-md-6 col-lg-3 my-3">
           <img src="chemin/vers/image4.jpg" alt="Description image 4" class="img-fluid">
         </div>
-    
+
         <!-- Bouton -->
         <div class="col-12 text-center my-4">
-          <a href="lien/vers/gallery.html" class="btn btn-custom">Voir la galerie</a>
+          <a href="./Pages/gallery.html" class="btn btn-custom">Voir la galerie</a>
         </div>
       </div>
     </section>
   </main>
+  <section id="contact">
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+          <span id="copyright" class="mb-3 mb-md-0 text-muted"></span>
+        </div>
 
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-        </a>
-        <span id="copyright" class="mb-3 mb-md-0 text-muted"></span>
-      </div>
-  
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-      </ul>
-    </footer>
-  </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#twitter"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#instagram"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#facebook"></use>
+              </svg></a></li>
+        </ul>
+      </footer>
+    </div>
+  </section>
   <script src="main.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
