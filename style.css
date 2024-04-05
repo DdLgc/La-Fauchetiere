@@ -158,7 +158,36 @@ h2::after {
 .race-card:hover .race-name {
   transform: translateY(-100%); 
 }
+footer {
+  width: 100%;
+  background-color: #000000;
+  font-size: 0.9rem;
+}
 
+.footer-link, .social-icon {
+  color: white;
+  margin-right: 10px; 
+}
+
+.footer-link:hover, .social-icon:hover {
+  color: #FBEE66; 
+}
+
+.social-icon {
+  font-size: 1.5rem; 
+}
+#copyright {
+  color: white;
+}
+
+
+/* Responsivité pour les petits écrans */
+@media (max-width: 767.98px) {
+  .footer-link, .social-icon {
+    display: block; /* Les éléments s'affichent sur leur propre ligne */
+    margin-bottom: 10px; /* Espacement vertical entre les éléments */
+  }
+}
 
 @media (max-width: 767.98px) {
   .logo-menu-container {
