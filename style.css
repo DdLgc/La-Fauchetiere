@@ -23,7 +23,7 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 600px; /* Hauteur fixe pour l'en-tête */
+  height: 600px; 
 }
 
 .logo-menu-container {
@@ -32,7 +32,7 @@ header {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centrer le contenu verticalement */
+  justify-content: space-evenly; 
 }
 
 .navbar-nav {
@@ -42,12 +42,12 @@ header {
 }
 
 .nav-item + .nav-item {
-  margin-top: 0.5rem; /* Ajoute un peu d'espace entre les liens pour les écrans plus petits */
+  margin-top: 0.5rem; 
 }
 
 .nav-link {
-  text-decoration: none; /* Enlève le soulignement par défaut */
-  position: relative; /* Position relative pour le positionnement du pseudo-élément */
+  text-decoration: none; 
+  position: relative; 
   display: inline-block;
 }
 
@@ -58,19 +58,21 @@ header {
   bottom: -0.10em;
   width: 100%;
   height: 2px;
-  background-color: transparent; /* Initialement transparent */
-  transition: background-color 0.3s ease; /* Transition pour l'effet de survol */
+  background-color: transparent; 
+  transition: background-color 0.3s ease; 
 }
 .nav-link:hover::after {
-  background-color: #FBEE66; /* Couleur jaune au survol */
+  background-color: #FBEE66; 
 }
 h2 {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-size: 2.5em ;
   text-align: center;
   font-weight: bold; 
   position: relative;
   margin-bottom: 1em;
 }
-
 h2::after {
   content: ''; 
   position: absolute;
@@ -78,10 +80,25 @@ h2::after {
   transform: translateX(-50%); 
   bottom: -10px; 
   height: 2px; 
-  width: 20%; 
+  width: 14%; 
   background-color: #FBEE66; 
 }
+.h2-farming::after {
+  content: ''; 
+  position: absolute;
+  left: 50%; 
+  transform: translateX(-50%); 
+  bottom: -10px; 
+  height: 2px; 
+  width: 32%; 
+  background-color: #FBEE66; 
+}
+
 .btn {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-top: 1.5em;
+  margin-bottom: .3em;
   padding-left: 3em;
   padding-right: 3em;
   border-radius: 0;
@@ -184,18 +201,21 @@ footer {
 /* Responsivité pour les petits écrans */
 @media (max-width: 767.98px) {
   .footer-link, .social-icon {
-    display: block; /* Les éléments s'affichent sur leur propre ligne */
-    margin-bottom: 10px; /* Espacement vertical entre les éléments */
+    display: block; 
+    margin-bottom: 10px; 
   }
 }
 
 @media (max-width: 767.98px) {
   .logo-menu-container {
-    padding: 0.5rem;
+    padding: .5rem;
+    margin-left:5rem ;
+    margin-right:5rem ;
   }
 
   header {
     height: auto; 
+
   }
 
   .navbar-nav {
@@ -223,14 +243,14 @@ footer {
 /* Moyens appareils (tablette, 768px et plus) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   body {
-    font-size: 16px; /* Taille de police standard */
+    font-size: 16px; 
   }
 }
 
 /* Grands appareils (ordinateurs portables, 992px et plus) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   body {
-    font-size: 17px; /* Taille de police légèrement plus grande */
+    font-size: 17px; 
   }
 }
 
