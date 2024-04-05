@@ -27,6 +27,7 @@ header {
 }
 
 .logo-menu-container {
+  margin-left: 3em;
   background-color: rgba(246, 246, 242, 0.7);
   padding: 1rem;
   text-align: center;
@@ -46,6 +47,7 @@ header {
 }
 
 .nav-link {
+  letter-spacing:.2em;
   text-decoration: none; 
   position: relative; 
   display: inline-block;
@@ -69,7 +71,7 @@ h2 {
   text-transform: uppercase;
   font-size: 2.5em ;
   text-align: center;
-  font-weight: bold; 
+  font-weight: bolder; 
   position: relative;
   margin-bottom: 1em;
 }
@@ -92,6 +94,9 @@ h2::after {
   height: 2px; 
   width: 32%; 
   background-color: #FBEE66; 
+}
+p {
+letter-spacing: .1em;
 }
 
 .btn {
@@ -119,7 +124,6 @@ h2::after {
   background-position: center;
   height: 300px;
   margin: 15px;
-  border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease; 
 }
@@ -140,8 +144,8 @@ h2::after {
   bottom: 0;
   width: 100%;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+  background-color: #F6F6F2;
+  color: black;
   text-align: center;
   transition: bottom 0.3s ease;
 }
@@ -155,8 +159,8 @@ h2::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+  background-color:(246,246,242 );
+  color: black;
   text-align: center;
   transition: opacity 0.3s ease, bottom 0.3s ease;
 }
