@@ -127,6 +127,15 @@ letter-spacing: .1em;
   overflow: hidden;
   transition: transform 0.3s ease; 
 }
+.race-card .btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+.race-card:hover .race-content {
+  transform: translateY(0);
+}
 
 .race-name,
 .race-description {
@@ -140,11 +149,14 @@ letter-spacing: .1em;
 }
 
 .race-name {
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 10px;
-  background-color: #F6F6F2;
+  background-color: rgb(246,246,242,.8 );
   color: black;
   text-align: center;
   transition: bottom 0.3s ease;
@@ -159,7 +171,7 @@ letter-spacing: .1em;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:(246,246,242 );
+  background-color:rgb(246,246,242,.8 );
   color: black;
   text-align: center;
   transition: opacity 0.3s ease, bottom 0.3s ease;
