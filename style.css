@@ -169,12 +169,24 @@ letter-spacing: .1em;
   width: 100%;
   opacity: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color:rgb(246,246,242,.8 );
+  background-color: rgba(246,246,242,0.8);
   color: black;
   text-align: center;
   transition: opacity 0.3s ease, bottom 0.3s ease;
+}
+
+.race-card:hover .race-description {
+  opacity: 1;
+  bottom: 0;
+}
+
+.race-card .btn {
+  margin-top: 10px;
+  width: auto;
+  align-self: center;
 }
 
 .race-card:hover {
