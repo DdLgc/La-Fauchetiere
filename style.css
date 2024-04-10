@@ -203,6 +203,18 @@ letter-spacing: .1em;
 .race-card:hover .race-name {
   transform: translateY(-100%); 
 }
+#gallery {
+  background-color: #F6F6F2;
+}
+#gallery img{
+  width: 100%; 
+  height: auto;
+  object-fit: cover;
+}
+
+
+
+
 footer {
   width: 100%;
   background-color: #000000;
