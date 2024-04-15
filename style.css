@@ -12,28 +12,36 @@
 .open {
   font-family: "Open Sans", sans-serif;
 } 
-*/
-/* .source {font-family: "Source Code Pro", monospace;} */
+
+.source {font-family: "Source Code Pro", monospace;}
 .raleway {
   font-family: "Raleway", sans-serif;
-}
+} */
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 header {
   background-image: url("./assets/nav.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 600px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-menu-container {
-  margin-left: 3em;
+  margin-left: 0;
   background-color: rgba(246, 246, 242, 0.7);
   padding: 1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; 
+  justify-content: center; 
+  width: 100%;
 }
 
 .navbar-nav {
@@ -213,8 +221,6 @@ letter-spacing: .1em;
 }
 
 
-
-
 footer {
   width: 100%;
   background-color: #000000;
@@ -239,12 +245,8 @@ footer {
 }
 
 
-/* Responsivité pour les petits écrans */
 @media (max-width: 767.98px) {
-  .footer-link, .social-icon {
-    display: block; 
-    margin-bottom: 10px; 
-  }
+  
 }
 
 @media (max-width: 767.98px) {
@@ -256,11 +258,17 @@ footer {
 
   header {
     height: auto; 
-
   }
 
   .navbar-nav {
     text-align: center;
+  }
+  .footer-link, .social-icon {
+    display: inline-block; 
+    margin-bottom: 10px; 
+  }
+  .footer-social-icons {
+  text-align: center;
   }
 }
 
@@ -268,7 +276,14 @@ footer {
   body {
     font-size: 14px;
   }
-
+  .logo-menu-container {
+    width:73%;
+    margin: 0 auto; 
+    padding: 2.5rem;
+  }
+  .logo-menu-container img{
+    width: 70%;
+  }
   .nav-link {
     margin: 5px 0; 
   }
