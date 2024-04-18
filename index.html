@@ -192,7 +192,7 @@
         <div class="row">
           <div class="col-md-8">
             <p>Pour plus d'informations, <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal"
-                class="footer-link">contactez-nous</a>.</p>
+                class="footer-link">contactez-nous</a></p>
           </div>
           <div class="col-md-4 text-center footer-social-icons">
             <a href="https://facebook.com" class="social-icon mb-2"><i class="fab fa-facebook-f"></i></a>
@@ -225,6 +225,15 @@
               <div class="mb-3">
                 <label for="contact-email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="contact-email" required>
+              </div>
+              <div class="mb-3">
+                <label for="contact-subject" class="form-label">Objet</label>
+                <select class="form-control" id="contact-subject" required>
+                  <option value="">Sélectionnez un objet</option>
+                  <option value="reservation">Réservation</option>
+                  <option value="visite">Visite</option>
+                  <option value="naissance">Naissance</option>
+                </select>
               </div>
               <div class="mb-3">
                 <label for="contact-message" class="form-label">Message</label>

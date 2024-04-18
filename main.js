@@ -30,3 +30,28 @@ function adjustTruncate() {
 
 document.addEventListener("DOMContentLoaded", adjustTruncate);
 window.addEventListener('resize', adjustTruncate);
+
+// ***********Modal*******
+
+document.addEventListener('DOMContentLoaded', function () {
+  const subjectSelect = document.getElementById('contact-subject');
+  const messageTextArea = document.getElementById('contact-message');
+
+  subjectSelect.addEventListener('change', function () {
+    let message = '';
+    switch (this.value) {
+      case 'reservation':
+        message = 'Bonjour, je souhaite faire une réservation.';
+        break;
+      case 'visite':
+        message = 'Bonjour, je suis intéressé par une visite.';
+        break;
+      case 'naissance':
+        message = 'Bonjour, j’aimerais obtenir des informations sur les naissances récentes.';
+        break;
+      default:
+        message = '';
+    }
+    messageTextArea.value = message;
+  });
+});
