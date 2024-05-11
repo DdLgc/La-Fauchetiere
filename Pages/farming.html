@@ -69,12 +69,13 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8">
-            <p>Pour plus d'informations, <a href="Pages/" class="footer-link-form">contactez-nous</a></p>
+            <p>Pour plus d'informations, <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal"
+                class="footer-link text-decoration-none"><h3>contactez-nous</h3></a></p>
           </div>
           <div class="col-md-4 text-center footer-social-icons">
             <a href="https://facebook.com" class="social-icon mb-2"><i class="fab fa-facebook-f"></i></a>
             <a href="https://twitter.com" class="social-icon mb-2"><i class="fab fa-twitter"></i></a>
-            <a href="https://youtube.com" class="social-icon mb-2"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.youtube.com/shorts/I8HU_FAfVl8" class="social-icon mb-2"><i class="fab fa-youtube"></i></a>
             <a href="https://index.html" class="social-icon mb-2"><i class="fas fa-globe"></i></a>
           </div>
         </div>
@@ -85,6 +86,43 @@
         </div>
       </div>
     </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">Formulaire de Contact</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="contact-name" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="contact-name" required>
+              </div>
+              <div class="mb-3">
+                <label for="contact-email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="contact-email" required>
+              </div>
+              <div class="mb-3">
+                <label for="contact-subject" class="form-label">Objet</label>
+                <select class="form-control" id="contact-subject" required>
+                  <option value="">Sélectionnez un objet</option>
+                  <option value="reservation">Réservation</option>
+                  <option value="visite">Visite</option>
+                  <option value="naissance">Naissance</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="contact-message" class="form-label">Message</label>
+                <textarea class="form-control" id="contact-message" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
   <script src="main.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
