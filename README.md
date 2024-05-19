@@ -6,19 +6,20 @@ Le site web du Domaine de la Fauchetière présente notre élevage spécialisé 
 
 ## Fonctionnalités 
 - **Accueil** : Présentation brève de l'élevage et accès rapide aux différentes sections.
-- **Nos Races** : Détails sur les races élevées, avec des cartes interactives.
+- **Nos Races** : Détails sur les races élevées, avec des cartes interactives.Menant sur une page pour chacune des races.
 - **Galerie** : Images des chiens et des installations de l'élevage.
 - **À Propos de l'Élevage** : Informations sur les méthodes et la philosophie de l'élevage.
-- **Contact** : Formulaire de contact pour les visiteurs intéressés.
+- **Contact** : Formulaire de contact pour les visiteurs intéressés avec différentes propositions de contact.
 
 ## Technologies Utilisées
 - **HTML/CSS** : Structure et style du site.
 - **Bootstrap** : Framework CSS pour le design responsive et les composants interactifs.
-- **JavaScript** : Pour des interactions plus dynamiques (non inclus dans la version actuelle).
+- **JavaScript** : Pour des interactions plus dynamiques, la date actuel, les troncatures de texte et la modal pour le contact.
 
 ## Structure du Projet
 - `index.html` : Page principale du site.
 - `style.css` : Feuille de style personnalisée pour le site.
+- `main.js` : Dynamiser le site.
 - `Pages/"races"` : Feuilles des races différentes de l'élevage.
 - `assets/` : Dossier contenant les images et autres ressources statiques.
 
