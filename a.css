@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Lato&family=Montserrat&family=Open+Sans&family=Raleway&family=Source+Code+Pro&display=swap");
+
+/* Réinitialiser les marges et les paddings pour tous les éléments et définir le box-sizing à border-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style de l'en-tête avec une image de fond couvrant toute la surface */
+header {
+  background-image: url("./assets/nav.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Conteneur pour le logo et le menu avec fond transparent et centrage du texte */
+.logo-menu-container {
+  margin-left: 0;
+  background-color: rgba(246, 246, 242, 0.7);
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  width: 100%;
+}
+
+/* Réinitialisation de la liste de navigation */
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Marge supérieure entre les éléments de navigation */
+.nav-item + .nav-item {
+  margin-top: 0.5rem; 
+}
+
+/* Style des liens de navigation */
+.nav-link {
+  letter-spacing: .2em;
+  text-decoration: none; 
+  position: relative; 
+  display: inline-block;
+}
+
+/* Effet de survol pour les liens de navigation */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.10em;
+  width: 100%;
+  height: 2px;
+  background-color: transparent; 
+  transition: background-color 0.3s ease; 
+}
+
+.nav-link:hover::after {
+  background-color: #FBEE66; 
+}
+
+/* Style des titres h2 */
+h2 {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: bolder; 
+  position: relative;
+  margin-bottom: 1em;
+}
+
+/* Soulignement des titres h2 */
+h2::after {
+  content: ''; 
+  position: absolute;
+  left: 50%; 
+  transform: translateX(-50%); 
+  bottom: -10px; 
+  height: 2px; 
+  width: 14%; 
+  background-color: #FBEE66; 
+}
+
+/* Soulignement spécifique pour les titres h2 de la section farming */
+.h2-farming::after {
+  content: ''; 
+  position: absolute;
+  left: 50%; 
+  transform: translateX(-50%); 
+  bottom: -10px; 
+  height: 2px; 
+  width: 32%; 
+  background-color: #FBEE66; 
+}
+
+p {
+  letter-spacing: .1em;
+}
+
+/* Style des boutons */
+.btn {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-top: 1.5em;
+  margin-bottom: .3em;
+  padding-left: 3em;
+  padding-right: 3em;
+  border-radius: 0;
+  background-color: transparent; 
+  color: black; 
+  border: 1px solid #000000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Effet de survol et de focus pour les boutons */
+.btn:hover, .btn:focus {
+  background-color: #FBEE66; 
+  color: black; 
+  transform: scale(1.05); 
+}
+
+/* Style des cartes de races */
+.race-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  margin: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease; 
+}
+
+/* Boutons dans les cartes de races */
+.race-card .btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Effet de survol pour le contenu des cartes de races */
+.race-card:hover .race-content {
+  transform: translateY(0);
+}
+
+/* Style pour le nom et la description des races  */
+.race-name, .race-description {
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Style spécifique pour le nom des races  */
+.race-name {
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(246, 246, 242, .8);
+  color: black;
+  text-align: center;
+  transition: bottom 0.3s ease;
+}
+
+/* Style spécifique pour la description des races  */
+.race-description {
+  position: absolute;
+  bottom: -100%; 
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(246, 246, 242, 0.8);
+  color: black;
+  text-align: center;
+  transition: opacity 0.3s ease, bottom 0.3s ease;
+}
+
+/* Effet de survol pour la description des cartes de races */
+.race-card:hover .race-description {
+  opacity: 1;
+  bottom: 0;
+}
+
+/* Centrage des boutons dans les cartes de races */
+.race-card .btn {
+  margin-top: 10px;
+  width: auto;
+  align-self: center;
+}
+
+/* Effet de survol pour les cartes de races */
+.race-card:hover {
+  transform: scale(1.05); 
+}
+
+.race-card:hover .race-name {
+  bottom: 65%;
+}
+
+/* Affichage de la description des races au survol */
+.race-card:hover .race-description {
+  opacity: 1;
+  bottom: 0;
+}
+
+.race-card:hover .race-name {
+  transform: translateY(-100%); 
+}
+
+/* Style de la galerie */
+#gallery {
+  background-color: #F6F6F2;
+}
+
+#gallery img {
+  width: 100%; 
+  height: auto;
+  object-fit: cover;
+}
+
+/* Style du pied de page */
+footer {
+  width: 100%;
+  background-color: #000000;
+  font-size: 0.9rem;
+}
+
+.footer-link, .social-icon {
+  color: white;
+  margin-right: 10px; 
+}
+
+.footer-link:hover, .social-icon:hover {
+  color: #FBEE66; 
+}
+
+.social-icon {
+  font-size: 1.5rem; 
+}
+
+#copyright {
+  color: white;
+}
+
+/* ******************** MEDIA QUERIES **************************** */
+
+/* Adaptation pour les écrans de moins de 992px de largeur */
+@media (max-width: 991.98px) {
+  .social-icon {
+    display: inline;
+    margin-right: 10px;
+  }
+  .col-md-4.text-center {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Adaptation pour les écrans de moins de 768px de largeur */
+@media (max-width: 767.98px) {
+  .logo-menu-container {
+    padding: .5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  header {
+    height: auto;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+  .footer-link, .social-icon {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .footer-social-icons {
+    text-align: center;
+  }
+  .logo-menu-container {
+    padding: 0.5rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .navbar-vertical {
+    justify-content: center;
+  }
+  body {
+    font-size: 15px;
+  }
+}
+
+/* Adaptation pour les écrans de moins de 576px de largeur */
+@media (max-width: 575.98px) {
+  body {
+    font-size: 14px;
+  }
+  .logo-menu-container {
+    width: 73%;
+    margin: 0 auto;
+    padding: 2.5rem;
+  }
+  .logo-menu-container img {
+    width: 70%;
+  }
+  .nav-link {
+    margin: 5px 0;
+  }
+}
+
+/* Adaptation pour les écrans entre 576px et 768px de largeur */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+/* Adaptation pour les écrans entre 768px et 992px de largeur */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body {
+    font-size: 16px;
+  }
+}
