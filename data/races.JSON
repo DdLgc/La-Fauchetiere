@@ -11,10 +11,10 @@
       "Espérance de vie": "12 à 15 ans",
       "Durée de gestation": "56 à 70 jours"
     },
-    "character": "À compléter",
-    "care": "À compléter",
-    "diet": "À compléter",
-    "health": "À compléter"
+    "character": "Intelligent et vif, avec une grande capacité d'apprentissage.Fidèle et attaché à son maître, parfois méfiant envers les étrangers.Énergique et joueur, nécessitant une stimulation mentale et physique régulière.Protecteur, il peut aboyer pour alerter en cas de présence inhabituelle.",
+    "care": "Son pelage dense et double nécessite un brossage régulier (2 à 3 fois par semaine) pour éviter les nœuds et limiter la perte de poils. Une mue annuelle (printemps/automne) est plus intense.",
+    "diet": "Peut être sensible aux allergies alimentaires (protéines ou céréales). Un régime BARF ou des croquettes sans céréales peut être envisagé sous supervision vétérinaire",
+    "health": "Stérilisation recommandée pour réduire les risques de tumeurs mammaires (femelles) ou de cancers (mâles)."
   },
   "bergerAllemand": {
     "name": "Berger Allemand",
