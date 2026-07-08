@@ -1,0 +1,52 @@
+{
+  "spitzLoup": {
+    "name": "Spitz Loup",
+    "image": "Spitz.png",
+    "intro": "Le Spitz Loup, appelé aussi Keeshond dans les pays anglo-saxons, est le plus grand des Spitz. C'est un très bon compagnon de vie, vif, gai et joyeux, aussi reconnu pour sa fidélité sans bornes. C'est un bon chien de garde qui saura prévenir et dissuader si des inconnus approchent de votre maison.",
+    "stats": {
+      "Taille": "40 cm à 58 cm",
+      "Poids": "16 kg à 22 kg",
+      "Poil": "court en sous-poil, long en couverture",
+      "Couleur": "gris argenté",
+      "Espérance de vie": "12 à 15 ans",
+      "Durée de gestation": "56 à 70 jours"
+    },
+    "character": "À compléter",
+    "care": "À compléter",
+    "diet": "À compléter",
+    "health": "À compléter"
+  },
+  "bergerAllemand": {
+    "name": "Berger Allemand",
+    "image": "Bouvier.png",
+    "intro": "Le Berger Allemand, également connu sous le nom d'Alsatian en Grande-Bretagne, est l'une des races de chiens les plus reconnues au monde. Développée à la fin du 19ème siècle par Max von Stephanitz, cette race est réputée pour son intelligence, sa capacité de travail et sa polyvalence.",
+    "stats": {
+      "Poids": "30-40 kg",
+      "Poil": "Dense, court à moyen",
+      "Couleur": "Noir et feu, sable, tout noir, parfois tout blanc",
+      "Espérance de vie": "9 à 13 ans",
+      "Durée de gestation": "Environ 63 jours"
+    },
+    "character": "Le Berger Allemand est extrêmement fidèle, attentif et intelligent, ce qui le rend parfait pour des rôles tels que chien policier, chien de recherche et de sauvetage, et chien-guide.",
+    "care": "Il nécessite beaucoup d'exercice quotidien. Le brossage régulier est nécessaire, surtout pendant les périodes de mue.",
+    "diet": "Un régime riche en nutriments, avec une attention particulière aux aliments favorisant la santé articulaire et musculaire.",
+    "health": "Peut être sujet à la dysplasie de la hanche, la myélopathie dégénérative et des troubles digestifs."
+  },
+  "bouvier": {
+    "name": "Bouvier Bernois",
+    "image": "bouvier-bernois-1.jpg",
+    "intro": "Le Bouvier Bernois est originaire du canton de Berne, en Suisse, où il était utilisé comme chien de ferme polyvalent : garde du bétail, tractage de charrettes et compagnie. Reconnaissable à son épais poil tricolore noir, blanc et feu, c'est un chien de grande taille, doux et affectueux, souvent surnommé « géant gentil ». Malgré son gabarit imposant, il est réputé pour son calme et sa patience, ce qui en fait un excellent chien de famille.",
+    "stats": {
+      "Taille": "58 à 70 cm au garrot",
+      "Poids": "35 à 50 kg",
+      "Poil": "long, épais, tricolore (noir, blanc, feu)",
+      "Couleur": "noir, blanc et feu",
+      "Espérance de vie": "7 à 10 ans",
+      "Durée de gestation": "Environ 63 jours"
+    },
+    "character": "Le Bouvier Bernois est calme, affectueux et très attaché à sa famille. Sociable et patient avec les enfants, il reste un bon gardien sans être agressif. Il supporte mal la solitude et a besoin de présence humaine régulière.",
+    "care": "Son épais pelage nécessite un brossage fréquent, surtout en période de mue. Il tolère mal la chaleur en raison de sa fourrure dense et a besoin d'une activité physique modérée mais régulière.",
+    "diet": "Une alimentation adaptée à sa grande taille est essentielle, avec un contrôle du poids pour limiter les tensions sur les articulations pendant la croissance.",
+    "health": "Le Bouvier Bernois est prédisposé à la dysplasie de la hanche et du coude, et présente malheureusement un taux plus élevé de certains cancers, ce qui explique son espérance de vie relativement courte pour un chien de cette taille. Un suivi vétérinaire régulier est fortement recommandé."
+  }
+}
