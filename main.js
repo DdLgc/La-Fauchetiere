@@ -1,57 +1,74 @@
-
-const currentYear = new Date().getFullYear();
-  document.getElementById('copyright').textContent = `Copyright © ${currentYear} Ddlgc`;
-
-
-
-
-  function truncateText(selector, maxLength) {
-    var elements = document.querySelectorAll(selector);
-    for (var i = 0; i < elements.length; i++) {
-      var element = elements[i];
-      var text = element.innerText;
-      var words = text.split(' ');
-  
-      if (words.length > maxLength) {
-        text = words.slice(0, maxLength).join(' ') + '...';
-        element.innerText = text;
-      }
+class CopyrightUpdater {
+  constructor(selector){
+    this.element = document.querySelector(selector);
   }
-}
-function adjustTruncate() {
-  var screenWidth = window.innerWidth;
-  if (screenWidth >= 767 && screenWidth <= 1111) {
-    truncateText('.js-truncate', 17); 
-  } else {
-    truncateText('.js-truncate', 39); 
+  render() {
+    if (!this.element) return;
+    const year = new Date().getFullYear();
+    this.element.tectContent = `Copyright  © ${year} Ddlgc`;
   }
 }
 
-
-document.addEventListener("DOMContentLoaded", adjustTruncate);
-window.addEventListener('resize', adjustTruncate);
-
-// ***********Modal*******
-
-document.addEventListener('DOMContentLoaded', function () {
-  const subjectSelect = document.getElementById('contact-subject');
-  const messageTextArea = document.getElementById('contact-message');
-
-  subjectSelect.addEventListener('change', function () {
-    let message = '';
-    switch (this.value) {
-      case 'reservation':
-        message = 'Bonjour, je souhaite faire une réservation.';
-        break;
-      case 'visite':
-        message = 'Bonjour, je suis intéressé par une visite.';
-        break;
-      case 'naissance':
-        message = 'Bonjour, j’aimerais obtenir des informations sur les naissances récentes.';
-        break;
-      default:
-        message = '';
-    }
-    messageTextArea.value = message;
+class TextTruncator {
+  constructor(selector) {
+    this.selector = selector;
+    this.originalTexts = new Map();
+    this.elements = document.querySelectorAll(selector);
+    this.elements.forEach(element => this.originalTexts.set(element, element.innerText));
+  }
+truncate(maxWords) {
+  this.elements.forEach(element => {
+    const full = this.originalTexts.get(element);
+    const words = full.split(' ');
+    element.innerText = words.length > maxWords
+      ? words.slice(0, maxWords).join(' ') + '...'
+      : full;
   });
+}
+  adjustToScreen() {
+    const width= window.innerWidth;
+    const maxWords = (width >= 767 && width <= 1111) ? 17 :39;
+    this.truncate(maxWords);
+  }
+  init() {
+    const width = window.innerWidth;
+    this.adjustToScreen()
+    window.addEventListener('resize', () => this.adjustToScreen())
+  }
+}
+
+
+class ContactModal {
+  constructor(selectId, textareaId) {
+    this.select = document.getElementById(selectId);
+    this.textarea = document.getElementById(textareaId)
+    this.message = {
+      reservation: 'Bonjour, je souhaite faire une réservation.',
+      visite: 'Bonjour, je suis intéressé par une visite.',
+      naissance: 'Bonjour, j’aimerais obtenir des informations sur les naissances récentes.'
+    };
+  }
+  init(){
+    if(!this.select || !this.textarea)return;
+    this.select.addEventListener('change', () => {
+      this.textarea.value = this.message[this.select.value] || '';
+    });
+  }
+}
+
+class App {
+  constructor() {
+    this.copyright = new CopyrightUpdater('#copyright');
+    this.truncator = new TextTruncator('.js-truncate');
+    this.contactModal = new ContactModal('contact-subject', 'contact-message');
+  }
+  init() {
+    this.copyright.render();
+    this.truncator.init();
+    this.contactModal.init();
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  new App().init();
 });
