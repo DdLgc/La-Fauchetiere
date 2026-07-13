@@ -1,4 +1,4 @@
-class RacePAge {
+class RacePage {
   constructor(jsonPath, breedKey) {
     this.jsonPath = jsonPath;
     this.breedKey = breedKey;
@@ -24,10 +24,7 @@ class RacePAge {
   render() {
     this.titleElement.textContent = `${this.breed.name} - Domaine de la Fauchetière`;
 
-    const statsHtml = object
-      .entries(this.breed.stats)
-      .map(([label, value]) => `- ${label} : ${value}`)
-      .join("<br>");
+    const statsHtml = Object.entries(this.breed.stats).map(([label, value]) => `- ${label} : ${value}`).join("<br>");
 
     this.contentElement.innerHTML = `
     <h2 class="text-center fw-bold">${this.breed.name}</h2>
@@ -54,6 +51,7 @@ class RacePAge {
 
 const params = new URLSearchParams(window.location.search);
 const breedKey = params.get('breed') || 'spitzLoup';
+console.log('breedKey:', breedKey, '| full URL:', window.location.href);
 
 document.addEventListener('DOMContentLoaded', ()=> {
     new RacePage('../data/races.json', breedKey).load()
