@@ -1,3 +1,26 @@
+class Layout {
+  constructor() {
+    this.prefix = window.location.pathname.includes('/Pages/') ? '../' : './';
+  }
+
+  async loadPartial(url, targetSelector) {
+    const target = document.querySelector(targetSelector);
+    if (!target) return;
+    const response = await fetch(this.prefix + url);
+    let html = await response.text();
+    html = html.replaceAll('{{PREFIX}}', this.prefix);
+    target.innerHTML = html;
+  }
+
+  async init() {
+    await Promise.all([
+      this.loadPartial('partials/nav.html', '#site-nav'),
+      this.loadPartial('partials/footer.html', '#site-footer')
+    ]);
+  }
+}
+
+
 class CopyrightUpdater {
   constructor(selector){
     this.element = document.querySelector(selector);
@@ -58,11 +81,13 @@ class ContactModal {
 
 class App {
   constructor() {
+    this.layout = new Layout();
     this.copyright = new CopyrightUpdater('#copyright');
     this.truncator = new TextTruncator('.js-truncate');
     this.contactModal = new ContactModal('contact-subject', 'contact-message');
   }
-  init() {
+  async init() {
+    await this.layout.init();
     this.copyright.render();
     this.truncator.init();
     this.contactModal.init();
