@@ -1,0 +1,21 @@
+{
+    "spitzLoup":[
+        { "src": "assets/spitzLoup-1.jpg", "alt":"spitzLoup"},
+        { "src": "assets/spitzLoup-2.jpg", "alt":"spitzLoup"},
+        { "src": "assets/spitzLoup-3.jpg", "alt":"spitzLoup"},
+        { "src": "assets/spitzLoup-4.jpg", "alt":"spitzLoup"}
+    ],
+    "bergerAllemand": [
+        { "src": "assets/berger-allemand-1.jpg", "alt":"Berger Allemand"},
+        { "src": "assets/berger-allemand-2.jpg", "alt":"Berger Allemand"},
+        { "src": "assets/berger-allemand-3.jpg", "alt":"Berger Allemand"},
+        { "src": "assets/berger-allemand-4.jpg", "alt":"Berger Allemand"}
+    ],
+    "bouvierBernois": [
+        { "src": "assets/ouvier-bernois-1.jpg", "alt":"Bouvier Bernois"},
+        { "src": "assets/ouvier-bernois-2.jpg", "alt":"Bouvier Bernois"},
+        { "src": "assets/ouvier-bernois-3.jpg", "alt":"Bouvier Bernois"},
+        { "src": "assets/ouvier-bernois-4.jpg", "alt":"Bouvier Bernois"},
+        { "src": "assets/ouvier-bernois-5.jpg", "alt":"Bouvier Bernois"}
+    ]
+}
