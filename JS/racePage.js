@@ -54,5 +54,5 @@ const breedKey = params.get('breed') || 'spitzLoup';
 console.log('breedKey:', breedKey, '| full URL:', window.location.href);
 
 document.addEventListener('DOMContentLoaded', ()=> {
-    new RacePage('../data/races.json', breedKey).load()
+    new RacePage('data/races.JSON', breedKey).load()
 });
