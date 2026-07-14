@@ -47,7 +47,10 @@ class RacePage {
     `;
   }
 }
-
+document.addEventListener('DOMContentLoaded', async ()=> {
+  await new RacePage('data/races.json', breedKey).load();
+  new Gallery('data/gallery.json').renderByBreed(breedKey, '#race-galler-grid');
+});
 
 const params = new URLSearchParams(window.location.search);
 const breedKey = params.get('breed') || 'spitzLoup';
