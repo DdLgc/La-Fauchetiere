@@ -158,9 +158,9 @@ h2::after {
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  background-color: rgba(246, 246, 242, .9);
+  background-color: rgba(246, 246, 242, 0.9);
   color: var(--color-dark);
   z-index: 2;
 }
@@ -181,15 +181,18 @@ h2::after {
   color: var(--color-dark);
   opacity: 0;
   transform: translateY(-100%);
-  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
   overflow-y: auto;
   z-index: 1;
 }
 
 .race-description .btn {
   margin-top: 10px;
+  margin-bottom: 10px;
   width: auto;
-  align-self: center;
+  align-self: bottom;
 }
 
 .race-card:hover .race-description {
@@ -197,20 +200,102 @@ h2::after {
   transform: translateY(0);
 }
 
-/* =========
-   Galerie
-   ========= */
-#gallery {
-  background-color: var(--color-bg-light);
+/* =======================
+   Galerie - cartes photo
+   ======================= */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 4px;
 }
 
-#gallery img {
+.gallery-item img {
+  display: block;
   width: 100%;
-  height: auto;
+  height: 220px;
   object-fit: cover;
+  transition: transform var(--transition-fast);
 }
 
-.gallery-item
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* ============================
+   Galerie homepage -carroussel
+   ============================ */
+.gallery-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery-carousel {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.gallery-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-carousel {
+  scrollbar-width: none;
+}
+
+.carousel-photo {
+  flex: 0 0 calc(25% - 9px);
+  min-width: 220px;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 4px;
+  scroll-snap-align: start;
+}
+
+.carousel-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-fast);
+}
+
+.carousel-photo:hover img {
+  transform: scale(1.05);
+}
+
+/* Flèches superposées sur la bannière, centrées verticalement */
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--color-dark);
+  background-color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: background-color var(--transition-fast);
+}
+
+.gallery-arrow-left {
+  left: 8px;
+}
+
+.gallery-arrow-right {
+  right: 8px;
+}
+
+.gallery-arrow:hover {
+  background-color: var(--color-accent);
+}
 
 /* =============
    Pied de page
@@ -278,6 +363,22 @@ footer {
 
   .navbar-vertical {
     justify-content: center;
+  }
+
+  .gallery-arrow {
+    display: none;
+  }
+
+  .gallery-carousel {
+    flex-direction: column;
+    overflow-x: visible;
+    scroll-snap-type: none;
+  }
+
+  .carousel-photo {
+    flex: 1 1 auto;
+    min-width: 100%;
+    height: 220px;
   }
 
   .footer-link,

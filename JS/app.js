@@ -88,6 +88,7 @@ class App {
     this.truncator = new TextTruncator(".js-truncate");
     this.contactModal = new ContactModal("contact-subject", "contact-message");
     this.gallery = new Gallery("data/gallery.json");
+    this.carousel = new GalleryCarousel('.gallery-carousel-wrapper');
   }
   async init() {
     await this.layout.init();
@@ -95,7 +96,8 @@ class App {
     this.truncator.init();
     this.contactModal.init();
     if (document.getElementById("gallery-grid")) {
-      this.gallery.renderRandomHomepage("#gallery-grid", 4);
+      this.gallery.renderRandomHomepage("#gallery-grid", 8);
+      this.carousel.init();
     }
   }
 }

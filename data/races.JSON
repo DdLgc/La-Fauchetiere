@@ -1,7 +1,7 @@
 {
   "spitzLoup": {
     "name": "Spitz Loup",
-    "image": "Spitz.png",
+    "image": "spitzLoup-1.jpg",
     "intro": "Le Spitz Loup, appelé aussi Keeshond dans les pays anglo-saxons, est le plus grand des Spitz. C'est un très bon compagnon de vie, vif, gai et joyeux, aussi reconnu pour sa fidélité sans bornes. C'est un bon chien de garde qui saura prévenir et dissuader si des inconnus approchent de votre maison.",
     "stats": {
       "Taille": "40 cm à 58 cm",
@@ -18,7 +18,7 @@
   },
   "bergerAllemand": {
     "name": "Berger Allemand",
-    "image": "Bouvier.png",
+    "image": "berger-allemand-1.jpg",
     "intro": "Le Berger Allemand, également connu sous le nom d'Alsatian en Grande-Bretagne, est l'une des races de chiens les plus reconnues au monde. Développée à la fin du 19ème siècle par Max von Stephanitz, cette race est réputée pour son intelligence, sa capacité de travail et sa polyvalence.",
     "stats": {
       "Poids": "30-40 kg",

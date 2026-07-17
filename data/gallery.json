@@ -1,21 +1,23 @@
 {
     "spitzLoup":[
-        { "src": "assets/spitzLoup-1.jpg", "alt":"spitzLoup"},
         { "src": "assets/spitzLoup-2.jpg", "alt":"spitzLoup"},
         { "src": "assets/spitzLoup-3.jpg", "alt":"spitzLoup"},
-        { "src": "assets/spitzLoup-4.jpg", "alt":"spitzLoup"}
+        { "src": "assets/spitzLoup-4.jpg", "alt":"spitzLoup"},
+        { "src": "assets/spitzLoup-5.jpg", "alt":"spitzLoup"},
+        { "src": "assets/spitzLoup-6.jpg", "alt":"spitzLoup"}
     ],
     "bergerAllemand": [
-        { "src": "assets/berger-allemand-1.jpg", "alt":"Berger Allemand"},
         { "src": "assets/berger-allemand-2.jpg", "alt":"Berger Allemand"},
         { "src": "assets/berger-allemand-3.jpg", "alt":"Berger Allemand"},
-        { "src": "assets/berger-allemand-4.jpg", "alt":"Berger Allemand"}
+        { "src": "assets/berger-allemand-4.jpg", "alt":"Berger Allemand"},
+        { "src": "assets/berger-allemand-5.jpg", "alt":"Berger Allemand"},
+        { "src": "assets/berger-allemand-6.jpg", "alt":"Berger Allemand"}
     ],
     "bouvierBernois": [
-        { "src": "assets/bouvier-bernois-1.jpg", "alt":"Bouvier Bernois"},
         { "src": "assets/bouvier-bernois-2.jpg", "alt":"Bouvier Bernois"},
         { "src": "assets/bouvier-bernois-3.jpg", "alt":"Bouvier Bernois"},
         { "src": "assets/bouvier-bernois-4.jpg", "alt":"Bouvier Bernois"},
-        { "src": "assets/bouvier-bernois-5.jpg", "alt":"Bouvier Bernois"}
+        { "src": "assets/bouvier-bernois-5.jpg", "alt":"Bouvier Bernois"},
+        { "src": "assets/bouvier-bernois-6.jpg", "alt":"Bouvier Bernois"}
     ]
 }
