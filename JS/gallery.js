@@ -1,6 +1,7 @@
 class Gallery {
-  constructor(jsonPath) {
+  constructor(jsonPath, basePath ='') {
     this.jsonPath = jsonPath;
+    this.basePath = basePath;
     this.data = null;
   }
 
@@ -25,7 +26,7 @@ class Gallery {
     if (!container) return;
     container.innerHTML = images.map(img => `
       <div class="col-12 col-md-6 col-lg-3 my-3 gallery-item">
-        <img src="${img.src}" alt="${img.alt}" class="img-fluid" loading="lazy">
+        <img src="${this.basePath}${img.src}" alt="${img.alt}" class="img-fluid" loading="lazy">
       </div>
     `).join('');
   }
@@ -35,7 +36,7 @@ class Gallery {
     if (!container) return;
     container.innerHTML = images.map(img => `
       <div class="carousel-photo">
-        <img src="${img.src}" alt="${img.alt}" loading="lazy">
+        <img src="${this.basePath}${img.src}" alt="${img.alt}" loading="lazy">
       </div>
     `).join('');
   }
