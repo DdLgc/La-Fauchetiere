@@ -81,3 +81,45 @@ class GalleryCarousel {
     this.rightBtn.addEventListener('click', () => this.scroll(1));
   }
 }
+
+class Lightbox {
+
+  constructor() {
+    this.overlay = null;
+    this.currentImg = null;
+  }
+
+  open(src, alt) {
+    if(this.overlay) this.close();
+
+    this.overlay = document.createElement('div');
+    this.overlay.className = 'lightbox-overlay';
+
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = alt;
+    img.className = 'lightbox-image';
+
+    this.overlay.appendChild(img);
+    document.body.appendChild(this.overlay);
+    document.body.style.overflow = 'hidden';
+
+    this.overlay.addEventListener('click', () => this.close());
+  }
+
+  close() {
+    if (!this.overlay) return;
+    this.overlay.remove();
+    this.overlay = null;
+    document.body.style.overflow = '';
+
+  }
+
+  bindTo(selector) {
+    document.addEventListener('click', (event => {
+      const img = event.target.closest(`${selector} img`);
+      if (!img) return;
+      this.open(img.src, img.alt)
+    }));
+  }
+}

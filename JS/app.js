@@ -89,12 +89,14 @@ class App {
     this.contactModal = new ContactModal("contact-subject", "contact-message");
     this.gallery = new Gallery("data/gallery.json");
     this.carousel = new GalleryCarousel('.gallery-carousel-wrapper');
+    this.lightbox = new Lightbox();
   }
   async init() {
     await this.layout.init();
     this.copyright.render();
     this.truncator.init();
     this.contactModal.init();
+    this.lightbox.bindTo('.gallery-item');
     if (document.getElementById("gallery-grid")) {
       this.gallery.renderRandomHomepage("#gallery-grid", 8);
       this.carousel.init();
