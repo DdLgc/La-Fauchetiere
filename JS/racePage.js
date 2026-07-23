@@ -47,16 +47,13 @@ class RacePage {
     `;
   }
 }
+const params = new URLSearchParams(window.location.search);
+const breedKey = params.get('breed') || 'spitzLoup';
 document.addEventListener('DOMContentLoaded', async ()=> {
   await new RacePage('data/races.json', breedKey).load();
   new Gallery('data/gallery.json').renderByBreed(breedKey, '#race-gallery-grid');
   new Lightbox().bindTo('#race-gallery-grid');
 });
 
-const params = new URLSearchParams(window.location.search);
-const breedKey = params.get('breed') || 'spitzLoup';
 console.log('breedKey:', breedKey, '| full URL:', window.location.href);
 
-document.addEventListener('DOMContentLoaded', ()=> {
-    new RacePage('data/races.json', breedKey).load()
-});

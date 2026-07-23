@@ -13,7 +13,7 @@
         { "src": "assets/berger-allemand-5.jpg", "alt":"Berger Allemand"},
         { "src": "assets/berger-allemand-6.jpg", "alt":"Berger Allemand"}
     ],
-    "bouvierBernois": [
+    "bouvier": [
         { "src": "assets/bouvier-bernois-2.jpg", "alt":"Bouvier Bernois"},
         { "src": "assets/bouvier-bernois-3.jpg", "alt":"Bouvier Bernois"},
         { "src": "assets/bouvier-bernois-4.jpg", "alt":"Bouvier Bernois"},
