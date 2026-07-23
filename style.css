@@ -301,8 +301,8 @@ h2::after {
   --------------------  */
 .lightbox-overlay {
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.85);
@@ -325,29 +325,117 @@ h2::after {
 /* ------------
    Pied de page
    ------------ */
-footer {
+.site-footer {
   width: 100%;
   background-color: var(--color-dark);
-  font-size: 0.9rem;
-}
-
-.footer-link,
-.social-icon {
   color: var(--color-white);
-  margin-right: 10px;
+  padding: 3rem 0 1.5rem;
+  font-size: 0.95rem;
 }
 
-.footer-link:hover,
-.social-icon:hover {
+.footer-main {
+  margin-bottom: 2rem;
+}
+
+.footer-logo {
+  max-width: 90px;
+  margin-bottom: 1rem;
+}
+
+.footer-tagline {
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: normal;
+  line-height: 1.5;
+}
+
+.footer-links h5,
+.footer-contact h5 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1rem;
+  margin-bottom: 1rem;
   color: var(--color-accent);
 }
 
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--color-accent);
+}
+
+.footer-contact p {
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: normal;
+  margin-bottom: 0.5rem;
+}
+
+.footer-contact p i {
+  color: var(--color-accent);
+  width: 20px;
+  margin-right: 8px;
+}
+
+.footer-contact-btn {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+.footer-contact-btn:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-dark);
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 12px;
+}
+
 .social-icon {
-  font-size: 1.5rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 1rem;
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.social-icon:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-dark);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgb(255, 255, 255);
+  padding-top: 1.5rem;
 }
 
 #copyright {
-  color: var(--color-white);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
 }
 
 /* -------------
