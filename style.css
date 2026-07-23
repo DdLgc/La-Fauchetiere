@@ -335,23 +335,44 @@ h2::after {
 
 .footer-main {
   margin-bottom: 2rem;
+  text-align: center;
+  row-gap: 2.5rem;
+}
+
+.footer-brand,
+.footer-links,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.5rem;
 }
 
 .footer-logo {
   max-width: 90px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 10px;
+  border: 4px solid transparent;
+  transition: border-color var(--transition-fast);
+}
+
+.footer-logo:hover {
+  border-color: var(--color-accent);
 }
 
 .footer-tagline {
   color: rgba(255, 255, 255, 0.7);
   letter-spacing: normal;
   line-height: 1.5;
+  max-width: 280px;
 }
 
 .footer-links h5,
 .footer-contact h5 {
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   font-size: 1rem;
   margin-bottom: 1rem;
   color: var(--color-accent);
@@ -361,6 +382,7 @@ h2::after {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 .footer-links li {
@@ -405,6 +427,7 @@ h2::after {
 .footer-social-icons {
   display: flex;
   gap: 12px;
+  justify-content: center;
 }
 
 .social-icon {
@@ -417,9 +440,7 @@ h2::after {
   justify-content: center;
   color: var(--color-white);
   font-size: 1rem;
-  transition:
-    background-color var(--transition-fast),
-    border-color var(--transition-fast);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .social-icon:hover {
@@ -429,15 +450,20 @@ h2::after {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgb(255, 255, 255);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding-top: 1.5rem;
 }
 
 #copyright {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-white);
   font-size: 0.85rem;
+  transition: color var(--transition-fast);
+  cursor: default;
 }
 
+#copyright:hover {
+  color: var(--color-accent);
+}
 /* -------------
    Media queries 
    ------------- */

@@ -22,12 +22,13 @@ class Layout {
 
 class CopyrightUpdater {
   constructor(selector) {
-    this.element = document.querySelector(selector);
+    this.selector = selector;
   }
   render() {
-    if (!this.element) return;
+    const element = document.querySelector(this.selector)
+    if (!element) return;
     const year = new Date().getFullYear();
-    this.element.tectContent = `Copyright  © ${year} Ddlgc`;
+    element.textContent = `Copyright  © ${year} Ddlgc`;
   }
 }
 
